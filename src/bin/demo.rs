@@ -12,7 +12,8 @@ use panic_probe as _;
 #[embassy_executor::main]
 async fn main(_spawner: Spawner) {
     let config = Config::default();
-    let _peripherals = embassy_stm32::init(config);
+    let _p = embassy_stm32::init(config);
+
     loop {
         info!("Hello");
         Timer::after_secs(1).await;

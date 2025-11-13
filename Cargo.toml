@@ -61,3 +61,25 @@ cortex-m-rt = "0.7.5"
 
 # Panic handler that exits `probe-run` with an error code
 panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+
+
+# The main embedded hal with only blocking traits
+embedded-hal-1 = { package = "embedded-hal", version = "1.0" }
+
+# Async embedded hal  
+embedded-hal-async = "1.0"
+
+# SPI/I2C bus sharing utilities for embedded-hal
+embedded-hal-bus = { version = "0.1", features = ["async"] }
+
+# Async IO traits for embedded systems
+embedded-io-async = { version = "0.6.1", features = ["defmt-03"] }
+
+##### For bmp390
+
+libm = "0.2.8"
+uom = { version = "0.36.0", default-features = false, features = [
+    "f32",
+    "si",
+    "autoconvert",
+] }
